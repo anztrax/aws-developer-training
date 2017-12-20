@@ -132,8 +132,10 @@ products :
             - type :
                 - long polling :
                     - di loop semua distributed queue system nya. lebih tinggi kemungkinan dapat message
+                    - get all updated data
                 - short polling :
-                    - just 1 - x queue system.
+                    - just 1 - x queue system , doesn't scan all the server
+                    - may chance get not updated data
         - lifecycle :
              - 4 days is retention period (the longest)
              - 14 days is the max if then go to DLQ (Death Letter Queue)
@@ -147,6 +149,7 @@ products :
         - in the email side if you want to update the email , you must add extra layers for it
 
     - SNS :
+        - push model
         - publisher --> topics --> subscribers
         - use case :
             - like newsletter promo, it's like topic
